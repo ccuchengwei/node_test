@@ -1,23 +1,29 @@
 extends layout
 
 block content
-    .wrapper    
-        aside.left-panel#left-panel
-            nav.navbar.navbar-expend-sm.navbar-default
-                .navbar-header
-                    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#main-menu' aria-controls='main-menu' aria-expanded='false' aria-label='Toggle navigation')
-                        i.fa.fa-bars
-                    #navbarSupportedContent.collapse.navbar-collapse
-                    a.nav-brand(href='#') INX
-                    a.nav-brand.hidden(href='#' ) test
-                #main-menu.main-menu.collapse.navbar-collapse.show
-                    ul.nav.navbar-nav
-                        h3.menu-title UI Element
-                        li.menu-item-has.children.dropdown
-                            a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='false' aria-expanded='false')
-                                i.menu-icon.fa.fa-laptop Components
-
-                    
+    
+    aside.left-panel#left-panel
+        nav.navbar.navbar-expand-sm.navbar-default
+            .navbar-header
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#main-menu' aria-controls='main-menu' aria-expanded='false' aria-label='Toggle navigation')
+                    i.fa.fa-bars
+                a.navbar-brand(href='#') INX
+                a.navbar-brand.hidden(href='#' ) test
+            #main-menu.main-menu.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a(href="#")
+                            i.menu-icon.fas.fa-tachometer-alt
+                            |  Dashboard
+                    h3.menu-title UI Element
+                    li.menu-item-has.children.dropdown
+                        a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='false' aria-expanded='false')
+                            i.menu-icon.fa.fa-laptop Components
+                        ul.sub-menu.children.dropdown-menu 
+                            li
+                                i.fa.fa-puzzle-piece
+                                a(href="#") test
+                
 
 
 
