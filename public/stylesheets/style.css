@@ -20,6 +20,10 @@ aside.left-panel
 
 }
 
+aside.left-panel a
+{
+    text-decoration: none;
+}
 .navbar {
     background: #272c33;
     border-radius: 0;
@@ -65,8 +69,7 @@ aside.left-panel
     position: relative;
  }
 
- .navbar .navbar-brand.hidden {
-    display: none; }
+
 
 .navbar .navbar-nav li.active .menu-icon,
 .navbar .navbar-nav li:hover .toggle_nav_button:before,
@@ -87,6 +90,7 @@ aside.left-panel
 
 .navbar .navbar-nav li > a:hover,
 .navbar .navbar-nav li > a:hover .menu-icon {
+
     color: #fff !important; }
 .navbar .navbar-nav li > a .menu-icon {
     color: #8b939b;
@@ -108,10 +112,49 @@ aside.left-panel
     padding: 15px 0 0;
     text-transform: uppercase;
     width: 100%; }
+
 @media(max-width: 1024px)
 {
     aside.left-panel{
         padding: 0 20px;
         width: 200px;
+    }
+}
+@media(max-width: 575.99px)
+{
+    body
+    {
+        display: block;
+    }
+    aside.left-panel
+    {
+        background: #272c33;
+        display: block;
+        height: auto;
+        width : 100%;
+        padding: 0 15px;
+        min-height: inherit;
+    }
+    aside.left-panel .navbar{
+        margin-bottom: 0px;
+    }
+    aside.left-panel .navbar .navbar-header
+    {
+        height: 50px;
+    }
+    aside.left-panel .navbar .navbar-brand
+    {
+        border-bottom: none;
+        display: inline-block;
+        float: left;
+        line-height: 1;
+        margin-top: 11px;
+        min-height: inherit;
+
+    }
+    aside.left-panel .navbar .navbar-toggler
+    {
+        float: right;
+       margin-top: 8px;
     }
 }
