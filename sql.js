@@ -27,4 +27,4 @@ const config = {
 
 
 var test = (()=>{return 1;})();
-console.log(test);
+console.log(test); 
