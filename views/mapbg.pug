@@ -1,0 +1,9 @@
+script(src="https://d3js.org/d3.v5.min.js")
+script.
+    
+    var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+    var zoom = d3.zoom().scaleExtent([1,40])
+    .translateExtent([[-100,-100],[width+90,height+100]])
+    .on("zoom",zoomed);

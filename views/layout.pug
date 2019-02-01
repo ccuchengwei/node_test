@@ -8,7 +8,8 @@ html
     script(src="/jquery/dist/jquery.slim.min.js")
     script(src="/popper.js/dist/umd/popper.js")
     script(src='/javascripts/bootstrap.min.js')
-    script(src='/javascripts/index.js')
+    
+    script(src="https://d3js.org/d3.v5.min.js")
     link(rel='stylesheet', href='/stylesheets/style.css')
     
     link(rel="stylesheet" href ='/@fortawesome/fontawesome-free/css/all.min.css' )
@@ -20,29 +21,32 @@ html
     //- script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous")
   body
     block sidebar
-      aside.left-panel#left-panel
-        nav.navbar.navbar-expand-sm.navbar-default
-            .navbar-header
-                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#main-menu' aria-controls='main-menu' aria-expanded='false' aria-label='Toggle navigation')
-                    i.fa.fa-bars
-                a.navbar-brand(href='#') INX
-                //- a.navbar-brand.hidden(href='#' ) test
-            #main-menu.main-menu.collapse.navbar-collapse
-                ul.nav.navbar-nav
-                    li.active
-                        a(href="#")
-                            i.menu-icon.fas.fa-tachometer-alt
-                            |  Dashboard
-                    h3.menu-title UI Element
-                    li.menu-item-has.children.dropdown
-                        a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='false' aria-expanded='false')
-                            i.menu-icon.fa.fa-laptop Components
-                        ul.sub-menu.children.dropdown-menu 
-                            li
-                                i.fa.fa-puzzle-piece
-                                a(href="#") test
-    block content
+        aside.left-panel#left-panel
+            nav.navbar.navbar-expand-sm.navbar-default
+                .navbar-header
+                    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#main-menu' aria-controls='main-menu' aria-expanded='false' aria-label='Toggle navigation')
+                        i.fa.fa-bars
+                    a.navbar-brand(href='#') INX
+                    //- a.navbar-brand.hidden(href='#' ) test
+                #main-menu.main-menu.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active
+                            a(href="#")
+                                i.menu-icon.fas.fa-tachometer-alt
+                                |  Dashboard
+                        h3.menu-title UI Element
+                        li.menu-item-has.children.dropdown
+                            a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='false' aria-expanded='false')
+                                i.menu-icon.fa.fa-laptop Components
+                            ul.sub-menu.children.dropdown-menu 
+                                li
+                                    i.fa.fa-puzzle-piece
+                                    a(href="#") test
+        div#right-panel.right-panel
+            block content
     
+                    
+
 
       
       

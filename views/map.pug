@@ -1,4 +1,12 @@
 extends layout.pug
 
-block context
+block content
+    script(src='/javascripts/index.js')
+    
+    svg(width="960" height="500")
+
+        each item in tag["recordset"]
+            p=item["TagID"]
+    include mapbg.pug
+
     
