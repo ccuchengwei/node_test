@@ -5,7 +5,7 @@ html
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
-    script(src="/jquery/dist/jquery.slim.min.js")
+    script(src="/jquery/dist/jquery.min.js")
     script(src="/popper.js/dist/umd/popper.js")
     script(src='/javascripts/bootstrap.min.js')
     
@@ -22,26 +22,39 @@ html
   body
     block sidebar
         aside.left-panel#left-panel
-            nav.navbar.navbar-expand-sm.navbar-default
+            nav.navbar.navbar-expand-md.navbar-default
                 .navbar-header
                     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#main-menu' aria-controls='main-menu' aria-expanded='false' aria-label='Toggle navigation')
-                        i.fa.fa-bars
+                        i.fas.fa-bars
                     a.navbar-brand(href='#') INX
                     //- a.navbar-brand.hidden(href='#' ) test
                 #main-menu.main-menu.collapse.navbar-collapse
                     ul.nav.navbar-nav
                         li.active
                             a(href="#")
-                                i.menu-icon.fas.fa-tachometer-alt
-                                |  Dashboard
-                        h3.menu-title UI Element
-                        li.menu-item-has.children.dropdown
-                            a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='false' aria-expanded='false')
-                                i.menu-icon.fa.fa-laptop Components
-                            ul.sub-menu.children.dropdown-menu 
-                                li
-                                    i.fa.fa-puzzle-piece
-                                    a(href="#") test
+                                i.menu-icon.fas.fa-home(style="color:#795548")  
+                                |Layout
+                        li
+                            a(href="#")
+                                i.menu-icon.fas.fa-tasks(style="color:#2196f3")  
+                                |Task
+                        li.sidebar-dropdown
+                            a 
+                                i.menu-icon.fas.fa-history(style="color:#673ab7")
+                                |History
+                                //- i.sidebar-dropdown-toggle.fas.fa-chevron-right
+                            .sidebar-submenu
+                                ul
+                                    li
+                                        a(href="#") Main Task 
+                                    li 
+                                        a(href="#") Sub Task 
+                                    li
+                                        a(href="#") AGV Status 
+
+
+      
+
         div#right-panel.right-panel
             block content
     

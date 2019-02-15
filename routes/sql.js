@@ -38,8 +38,25 @@ module.exports = {
            console.log(err);
    
         }
+    },
+    queryTagObj : async function()
+    {
+       try {
+           let pool = await sql.connect(config);
+           let result1 = await pool.request().query('SELECT * FROM TAG_OBJ');
+           console.log("query end");
+           sql.close();
+           return result1;
+       } catch (err) {
+           // ... error checks
+           console.log(err);
+   
+        }
     }
-}
+
+};
+
+module.exports.test = true;
 
 
 

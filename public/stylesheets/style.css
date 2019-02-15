@@ -1,3 +1,5 @@
+
+
 h1,
 h2,
 h3,
@@ -6,9 +8,30 @@ h5,
 h6 {
   margin: 0; }
 
-aside.left-panel
-{
-    background: #272c33;
+ul{
+list-style-type: none;}
+
+body {
+    background: #f1f2f7;
+    display: table;
+    font-size: 16px;
+    width: 100%; }
+
+.sidebar-dropdown > a:after{
+    transition: all 0.3s ease;}
+
+.fa-bars{
+    color: rgba(172, 172, 172, 0.712);}
+
+.axis path {
+    display: none;}
+  
+.axis line {
+    stroke-opacity: 0.3;
+    shape-rendering: crispEdges;}
+
+aside.left-panel{
+    background: #fdfdfd;
     display: table-cell;
     height: 100vh;
     min-height: 100%;
@@ -16,45 +39,42 @@ aside.left-panel
     vertical-align: top;
     transition: width 0.3s ease;
     -webkit-transition: width 0.3s ease;
-    padding: 0 25px;
+    padding: 0 0 0 0;}
 
-}
+aside.left-panel a{
+    text-decoration: none;}
 
-aside.left-panel a
-{
-    text-decoration: none;
+aside.left-panel .main-menu a{
+    background: none !important;
+    color: #818181 !important;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 30px;
 }
-
-.right-panel 
-{
-    display: table-cell;
-    padding-left: 0 !important;
-    -webkit-transition: all 0.35s ease;
-    transition: all 0.35s ease; 
-}
-.navbar {
-    background: #272c33;
+aside.left-panel .navbar {
+    background: #fdfdfd;
     border-radius: 0;
     border: none;
     display: block;
-    margin: 0 0 100px;
+    margin: 0 0 0 0;
     padding: 0;
- }
- .navbar .navbar-header {
+    width: 100%; }
+
+aside.left-panel .navbar .navbar-header {
     float: none;
+    box-shadow: 1px 1px rgba(167, 167, 167, 0.616);
     text-align: center;
     width: 100%; }
 
 
-.navbar-header a:hover
-{
-    color : white;
+aside.left-panel .navbar-header a:hover{
+    color : black;
     text-decoration: none;
 }
 
-.navbar .navbar-brand {
-    border-bottom: 1px solid #4e4e52;
-    color: #f1f2f7 !important;
+aside.left-panel .navbar .navbar-brand {
+    color: black !important;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     float: none;
@@ -62,73 +82,112 @@ aside.left-panel a
     margin: 0;
     text-align: left;
     text-transform: capitalize;
-    display: block;
     min-height: 69px;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     position: relative;
  }
 
+ aside.left-panel #main-menu{
+     margin-top: 20px;}
 
 
-.navbar .navbar-nav li.active .menu-icon,
-.navbar .navbar-nav li:hover .toggle_nav_button:before,
-.navbar .navbar-nav li .toggle_nav_button.nav-open:before {
-    color: #fff !important; }
-.navbar .navbar-nav li {
+
+
+aside.left-panel .navbar .navbar-nav li {
     width: 100%; }
-.navbar .navbar-nav li > a {
-    background: none !important;
-    color: #c8c9ce !important;
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 30px;
+
+aside.left-panel .navbar .navbar-nav > li > a {
     padding: 10px 0;
     position: relative;
     width: 100%; }
 
-.navbar .navbar-nav li > a:hover,
-.navbar .navbar-nav li > a:hover .menu-icon {
+aside.left-panel .navbar .navbar-nav li > a:hover{
+    color: #9b9b9b!important; }
 
-    color: #fff !important; }
-.navbar .navbar-nav li > a .menu-icon {
-    color: #8b939b;
+aside.left-panel .navbar .navbar-nav li > a .menu-icon {
     float: left;
-    margin-top: 8px;
+    margin-top: 5px;
+    margin-left: 30px;
     width: 40px;
     text-align: left;
     z-index: 9; }
 
-.navbar .menu-title {
-    border-bottom: 1px solid #4e4e52;
-    color: #9496a1;
-    clear: both;
+
+
+
+aside.left-panel .sidebar-submenu {
+    display: none;
+  }
+
+aside.left-panel .active  .sidebar-submenu{
     display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 50px;
-    padding: 15px 0 0;
-    text-transform: uppercase;
-    width: 100%; }
+    background-color: #e6e6e6;
+}
+
+aside.left-panel .sidebar-submenu ul li a{
+
+    padding: 10px 0 0 40px;
+    position: relative;
+    width: 100%;
+  }
+aside.left-panel  .sidebar-dropdown-toggle{
+    font-size: 13px;
+    position: absolute;
+    right: 15px;
+    top: 16px;
+}
+
+aside.left-panel .sidebar-dropdown > a:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background: 0 0;
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease; 
+}
+aside.left-panel  .sidebar-dropdown.active > a:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 15px; }
+
+
+.right-panel {
+    display: table-cell;
+    padding-left: 0 !important;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+
+
 
 @media(max-width: 1024px)
 {
     aside.left-panel{
-        padding: 0 20px;
         width: 200px;
     }
+
+    .navbar .navbar-nav li > a .menu-icon {     
+        width: 30px;
+    }
+
+
 }
-@media(max-width: 575.99px)
+
+@media(max-width: 768px)
 {
     body
     {
@@ -136,16 +195,20 @@ aside.left-panel a
     }
     aside.left-panel
     {
-        background: #272c33;
         display: block;
         height: auto;
         width : 100%;
-        padding: 0 15px;
         min-height: inherit;
+
     }
+
+    aside.left-panel .navbar .navbar-nav li > a {
+        padding: 5px 0; }
     aside.left-panel .navbar{
         margin-bottom: 0px;
-    }
+    } 
+
+
     aside.left-panel .navbar .navbar-header
     {
         height: 50px;
@@ -157,12 +220,36 @@ aside.left-panel a
         float: left;
         line-height: 1;
         margin-top: 11px;
+        padding-left: 30px;
         min-height: inherit;
 
     }
     aside.left-panel .navbar .navbar-toggler
     {
-        float: right;
+       float: right;
        margin-top: 8px;
     }
+
+    .navbar .navbar-nav li > a {      
+        line-height: 20px;
+    }
+
+    aside.left-panel .navbar .navbar-nav li > a 
+    {        
+        padding: 5px 0;
+
+     }
+     aside.left-panel .navbar .navbar-nav li > a .menu-icon
+     {
+        margin-top: 3px;
+    }
+
+    aside.left-panel .navbar .menu-title {
+        line-height: 30px;
+        padding: 0; }
+
+
+    .right-panel {
+
+        display: block; }
 }

@@ -2,11 +2,8 @@ extends layout.pug
 
 block content
     script(src='/javascripts/index.js')
-    
-    svg(width="960" height="500")
-
-        each item in tag["recordset"]
-            p=item["TagID"]
+    svg(width="500" height="500")
+        g
+            each item in tag["recordset"]
+                circle(cx= item["ControlPoint_X"] cy= item["ControlPoint_Y"] r="3" stroke="green" stroke-width="4" fill="green")
     include mapbg.pug
-
-    
